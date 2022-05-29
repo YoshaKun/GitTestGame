@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class StartViewController: UIViewController {
 
@@ -13,6 +14,7 @@ class StartViewController: UIViewController {
     
     private let viewModel: StartViewModel
     private let startView: StartView = .init()
+    private var cancellableSet: Set<AnyCancellable> = []
     
     // MARK: - Initialization
     
@@ -20,6 +22,16 @@ class StartViewController: UIViewController {
         self.viewModel = viewModel
         
         super.init(nibName: nil, bundle: nil)
+        
+        configureBindings()
+    }
+    
+    private func configureBindings() {
+        viewModel.computerGuessValue
+            .sink { [weak self] result in
+                self?.startView.set(value: result)
+            }
+            .store(in: &cancellableSet)
     }
     
     required init?(coder: NSCoder) {
@@ -38,6 +50,8 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel.startGame()
     }
 }
 

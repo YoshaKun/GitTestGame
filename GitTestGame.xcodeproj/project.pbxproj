@@ -21,6 +21,8 @@
 		6BB57EAB284385BA000BC737 /* SecondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB57EAA284385BA000BC737 /* SecondViewModel.swift */; };
 		6BB57EAD284385CB000BC737 /* SecondViewModelImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB57EAC284385CB000BC737 /* SecondViewModelImp.swift */; };
 		6BB57EAF28438666000BC737 /* SecondAssembley.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB57EAE28438666000BC737 /* SecondAssembley.swift */; };
+		6BB57EB52843906F000BC737 /* ComputerGuessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB57EB42843906F000BC737 /* ComputerGuessManager.swift */; };
+		6BB57EB828439091000BC737 /* ComputerGuessManagerImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB57EB728439091000BC737 /* ComputerGuessManagerImp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		6BB57EAA284385BA000BC737 /* SecondViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewModel.swift; sourceTree = "<group>"; };
 		6BB57EAC284385CB000BC737 /* SecondViewModelImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewModelImp.swift; sourceTree = "<group>"; };
 		6BB57EAE28438666000BC737 /* SecondAssembley.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondAssembley.swift; sourceTree = "<group>"; };
+		6BB57EB42843906F000BC737 /* ComputerGuessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerGuessManager.swift; sourceTree = "<group>"; };
+		6BB57EB728439091000BC737 /* ComputerGuessManagerImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputerGuessManagerImp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,16 +187,34 @@
 		6BB57EB028438D11000BC737 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				6BB57EB228438E05000BC737 /* Usecases */,
+				6BB57EB9284394BF000BC737 /* Entities */,
+				6BB57EB32843903E000BC737 /* Managers */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
 		};
-		6BB57EB228438E05000BC737 /* Usecases */ = {
+		6BB57EB32843903E000BC737 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				6BB57EB62843907A000BC737 /* WeGuessManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		6BB57EB62843907A000BC737 /* WeGuessManager */ = {
+			isa = PBXGroup;
+			children = (
+				6BB57EB42843906F000BC737 /* ComputerGuessManager.swift */,
+				6BB57EB728439091000BC737 /* ComputerGuessManagerImp.swift */,
+			);
+			path = WeGuessManager;
+			sourceTree = "<group>";
+		};
+		6BB57EB9284394BF000BC737 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Usecases;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,7 +295,9 @@
 				6BB57EA128437CE8000BC737 /* StartViewModel.swift in Sources */,
 				6B7BDEBD284256CE002FBD1E /* SceneDelegate.swift in Sources */,
 				6BB57EA328437D41000BC737 /* StartViewModelImp.swift in Sources */,
+				6BB57EB52843906F000BC737 /* ComputerGuessManager.swift in Sources */,
 				6B7BDEF328428C3A002FBD1E /* SecondViewController.swift in Sources */,
+				6BB57EB828439091000BC737 /* ComputerGuessManagerImp.swift in Sources */,
 				6BB57EAD284385CB000BC737 /* SecondViewModelImp.swift in Sources */,
 				6BB57EAF28438666000BC737 /* SecondAssembley.swift in Sources */,
 				6B7BDEF128428C27002FBD1E /* StartView.swift in Sources */,

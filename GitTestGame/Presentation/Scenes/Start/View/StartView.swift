@@ -73,3 +73,9 @@ final class StartView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
+extension StartView {
+    func set(value: Int) {
+        gameLabel.text = "computer guess: \(value)"
+    }
+}
