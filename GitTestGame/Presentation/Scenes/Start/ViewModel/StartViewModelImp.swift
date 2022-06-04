@@ -8,6 +8,9 @@
 import Combine
 
 final class StartViewModelImp: StartViewModel {
+//    var nextRound: AnyPublisher<Void, Never>
+    
+    
     // Third screen
     
     // MARK: - Private properties

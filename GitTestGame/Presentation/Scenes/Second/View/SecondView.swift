@@ -33,7 +33,7 @@ final class SecondView: UIView {
         roundLabel.numberOfLines = 0
         roundLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        playerLabel.text = "Computer guesess"
+        playerLabel.text = "Computer guesses"
         playerLabel.textColor = .black
         playerLabel.font = .systemFont(ofSize: 25, weight: .bold)
         playerLabel.numberOfLines = 0

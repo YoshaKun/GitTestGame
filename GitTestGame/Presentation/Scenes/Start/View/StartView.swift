@@ -36,7 +36,7 @@ final class StartView: UIView {
         
         gameLabel.text = "Guess Game"
         gameLabel.textColor = .black
-        gameLabel.font = .systemFont(ofSize: 50, weight: .bold)
+        gameLabel.font = .systemFont(ofSize: 25, weight: .bold)
         gameLabel.translatesAutoresizingMaskIntoConstraints = false
         gameLabel.numberOfLines = 0
         

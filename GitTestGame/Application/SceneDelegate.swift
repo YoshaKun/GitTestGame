@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         
-        let startAssembly = StartAssembly()
+        let startAssembly = ThirdAssembley()
 
         let navigationController = UINavigationController(rootViewController: startAssembly.viewController)
         navigationController.isNavigationBarHidden = true
