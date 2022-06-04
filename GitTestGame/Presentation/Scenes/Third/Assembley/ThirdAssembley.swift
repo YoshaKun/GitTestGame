@@ -16,6 +16,12 @@ final class ThirdAssembley {
     // MARK: - ViewModel
     
     private var viewModel: ThirdViewModel {
-        return ThirdViewModelImp()
+        return ThirdViewModelImp(computerGuessManager: computerGuessManager)
+    }
+    
+    // MARK: - Managers
+    
+    private var computerGuessManager: ComputerGuessManager {
+        ComputerGuessManagerImp()
     }
 }

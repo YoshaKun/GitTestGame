@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class ThirdViewController: UIViewController {
     
@@ -13,6 +14,7 @@ class ThirdViewController: UIViewController {
     
     private let viewModel: ThirdViewModel
     private let thirdView: ThirdView = .init()
+    private var cancellableSet: Set<AnyCancellable> = []
     
     // MARK: - Initialization
     
@@ -20,6 +22,16 @@ class ThirdViewController: UIViewController {
         self.viewModel = viewModel
         
         super.init(nibName: nil, bundle: nil)
+        
+        configureBindings()
+    }
+    
+    private func configureBindings() {
+        viewModel.computerGuessValue
+            .sink{ [weak self] result in
+                self?.thirdView.set(value: result)
+            }
+            .store(in: &cancellableSet)
     }
     
     required init?(coder: NSCoder) {

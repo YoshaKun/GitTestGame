@@ -5,4 +5,11 @@
 //  Created by Yosha Kun on 04.06.2022.
 //
 
-protocol ThirdViewModel {}
+import Combine
+
+protocol ThirdViewModel {
+    
+    var computerGuessValue: AnyPublisher<Int, Never> { get }
+    
+    func startGame()
+}

@@ -7,6 +7,10 @@
 
 import UIKit
 
+//protocol ThirdViewDelegate: AnyObject {
+//    func didTapped
+//}
+
 final class ThirdView: UIView {
     // MARK: - View properties
     
@@ -41,7 +45,6 @@ final class ThirdView: UIView {
         playerLabel.numberOfLines = 0
         playerLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        guessNumberLabel.text = "number is: value"
         guessNumberLabel.textColor = .black
         guessNumberLabel.font = .systemFont(ofSize: 25, weight: .bold)
         guessNumberLabel.numberOfLines = 0
@@ -62,7 +65,7 @@ final class ThirdView: UIView {
         equalButton.backgroundColor = .black
         equalButton.setTitleColor(.white, for: .normal)
         equalButton.setTitleColor(.systemBlue, for: .highlighted)
-        equalButton.addTarget(self, action: #selector(didTappedLessButton), for: .touchUpInside)
+        equalButton.addTarget(self, action: #selector(didTappedEqualButton), for: .touchUpInside)
         equalButton.translatesAutoresizingMaskIntoConstraints = false
         
         moreButton.setTitle(">", for: .normal)
@@ -71,7 +74,7 @@ final class ThirdView: UIView {
         moreButton.backgroundColor = .black
         moreButton.setTitleColor(.white, for: .normal)
         moreButton.setTitleColor(.systemBlue, for: .highlighted)
-        moreButton.addTarget(self, action: #selector(didTappedLessButton), for: .touchUpInside)
+        moreButton.addTarget(self, action: #selector(didTappedMoreButton), for: .touchUpInside)
         moreButton.translatesAutoresizingMaskIntoConstraints = false
     }
     
@@ -126,5 +129,11 @@ final class ThirdView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension ThirdView {
+    func set(value: Int) {
+        guessNumberLabel.text = "computer guess: \(value)"
     }
 }
