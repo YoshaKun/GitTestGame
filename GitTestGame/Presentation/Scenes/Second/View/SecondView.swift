@@ -13,6 +13,7 @@ final class SecondView: UIView {
     
     private let roundLabel = UILabel()
     private let playerLabel = UILabel()
+    private let checkGuess = UILabel()
     private let enterTextField = UITextField()
     
     // MARK: - Initialization
@@ -33,15 +34,21 @@ final class SecondView: UIView {
         roundLabel.numberOfLines = 0
         roundLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        playerLabel.text = "Computer guesses"
+        playerLabel.text = "You guesses"
         playerLabel.textColor = .black
         playerLabel.font = .systemFont(ofSize: 25, weight: .bold)
         playerLabel.numberOfLines = 0
         playerLabel.translatesAutoresizingMaskIntoConstraints = false
         
+        checkGuess.text = "< >"
+        checkGuess.textColor = .black
+        checkGuess.font = .systemFont(ofSize: 37, weight: .bold)
+        checkGuess.translatesAutoresizingMaskIntoConstraints = false
+        
         enterTextField.placeholder = "Enter the Number"
+        enterTextField.textAlignment = .center
         enterTextField.textColor = .black
-        enterTextField.backgroundColor = .lightGray
+        enterTextField.backgroundColor = .systemGray5
         enterTextField.layer.cornerRadius = 10
         enterTextField.clipsToBounds = true
         enterTextField.translatesAutoresizingMaskIntoConstraints = false
@@ -50,6 +57,7 @@ final class SecondView: UIView {
     private func configureLayouts() {
         addSubview(roundLabel)
         addSubview(playerLabel)
+        addSubview(checkGuess)
         addSubview(enterTextField)
         
         NSLayoutConstraint.activate([
@@ -59,9 +67,12 @@ final class SecondView: UIView {
             playerLabel.topAnchor.constraint(equalTo: roundLabel.bottomAnchor, constant: 50),
             playerLabel.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0),
             
+            checkGuess.topAnchor.constraint(equalTo: playerLabel.bottomAnchor, constant: 75),
+            checkGuess.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0),
+            
             enterTextField.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0),
-            enterTextField.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 0),
-            enterTextField.widthAnchor.constraint(equalToConstant: 200),
+            enterTextField.topAnchor.constraint(equalTo: checkGuess.bottomAnchor, constant: 75),
+            enterTextField.widthAnchor.constraint(equalToConstant: 250),
             enterTextField.heightAnchor.constraint(equalToConstant: 50)
         ])
     }

@@ -114,20 +114,20 @@ final class ThirdView: UIView {
             playerLabel.topAnchor.constraint(equalTo: roundLabel.bottomAnchor, constant: 50),
             playerLabel.centerXAnchor.constraint(equalTo: roundLabel.centerXAnchor, constant: 0),
             
-            guessNumberLabel.topAnchor.constraint(equalTo: playerLabel.bottomAnchor, constant: 25),
+            guessNumberLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 50),
             guessNumberLabel.centerXAnchor.constraint(equalTo: roundLabel.centerXAnchor, constant: 0),
             
-            equalButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -50),
+            equalButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -70),
             equalButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor, constant: 0),
             equalButton.widthAnchor.constraint(equalToConstant: 50),
             equalButton.heightAnchor.constraint(equalToConstant: 50),
             
-            lessButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -50),
+            lessButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -70),
             lessButton.trailingAnchor.constraint(equalTo: equalButton.leadingAnchor, constant: -25),
             lessButton.widthAnchor.constraint(equalToConstant: 50),
             lessButton.heightAnchor.constraint(equalToConstant: 50),
             
-            moreButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -50),
+            moreButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -70),
             moreButton.leadingAnchor.constraint(equalTo: equalButton.trailingAnchor, constant: 25),
             moreButton.widthAnchor.constraint(equalToConstant: 50),
             moreButton.heightAnchor.constraint(equalToConstant: 50),
@@ -141,6 +141,6 @@ final class ThirdView: UIView {
 
 extension ThirdView {    
     func set(value: Int) {
-        guessNumberLabel.text = "computer guess: \(value)"
+        guessNumberLabel.text = "Computer guess: \(value)"
     }
 }

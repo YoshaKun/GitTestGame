@@ -25,7 +25,7 @@ extension ComputerGuessManagerImp {
     }
 }
 
-// MARK: - counterOfGuesses: AnyPublisher<Int, Never>
+// MARK: - counterOfGuesses: Int
 
 extension ComputerGuessManagerImp {
     var counterOfGuesses: Int {

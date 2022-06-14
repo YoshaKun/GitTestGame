@@ -8,7 +8,8 @@
 import UIKit
 
 protocol StartViewDelegate: AnyObject {
-    func didTappedStartButton()
+    func didTappedComputerGuessButton()
+    func didTappedYouGuessButton()
 }
 
 final class StartView: UIView {
@@ -21,6 +22,8 @@ final class StartView: UIView {
     
     private let gameLabel = UILabel()
     private let startButton = UIButton()
+    private let computerGuessButton = UIButton()
+    private let youGuessButton = UIButton()
     
     //MARK: - Initialization
     
@@ -36,7 +39,7 @@ final class StartView: UIView {
         
         gameLabel.text = "Guess Game"
         gameLabel.textColor = .black
-        gameLabel.font = .systemFont(ofSize: 25, weight: .bold)
+        gameLabel.font = .systemFont(ofSize: 50, weight: .bold)
         gameLabel.translatesAutoresizingMaskIntoConstraints = false
         gameLabel.numberOfLines = 0
         
@@ -48,15 +51,48 @@ final class StartView: UIView {
         startButton.setTitleColor(.systemBlue, for: .highlighted)
         startButton.addTarget(self, action: #selector(didTappedStartButton), for: .touchUpInside)
         startButton.translatesAutoresizingMaskIntoConstraints = false
+        startButton.isHidden = false
+        
+        computerGuessButton.setTitle("Computer Gesses", for: .normal)
+        computerGuessButton.clipsToBounds = true
+        computerGuessButton.layer.cornerRadius = 10
+        computerGuessButton.backgroundColor = .black
+        computerGuessButton.setTitleColor(.white, for: .normal)
+        computerGuessButton.setTitleColor(.systemBlue, for: .highlighted)
+        computerGuessButton.addTarget(self, action: #selector(didTappedComputerGuessButton), for: .touchUpInside)
+        computerGuessButton.translatesAutoresizingMaskIntoConstraints = false
+        computerGuessButton.isHidden = true
+        
+        youGuessButton.setTitle("You Guesses", for: .normal)
+        youGuessButton.clipsToBounds = true
+        youGuessButton.layer.cornerRadius = 10
+        youGuessButton.backgroundColor = .black
+        youGuessButton.setTitleColor(.white, for: .normal)
+        youGuessButton.setTitleColor(.systemBlue, for: .highlighted)
+        youGuessButton.addTarget(self, action: #selector(didTappedYouGuessButton), for: .touchUpInside)
+        youGuessButton.translatesAutoresizingMaskIntoConstraints = false
+        youGuessButton.isHidden = true
     }
     
     @objc private func didTappedStartButton() {
-        delegate?.didTappedStartButton()
+        startButton.isHidden = true
+        computerGuessButton.isHidden = false
+        youGuessButton.isHidden = false
+    }
+    
+    @objc private func didTappedComputerGuessButton() {
+        delegate?.didTappedComputerGuessButton()
+    }
+    
+    @objc private func didTappedYouGuessButton() {
+        delegate?.didTappedYouGuessButton()
     }
     
     private func configureLayouts() {
         addSubview(gameLabel)
         addSubview(startButton)
+        addSubview(computerGuessButton)
+        addSubview(youGuessButton)
         
         NSLayoutConstraint.activate([
             gameLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 70),
@@ -65,7 +101,17 @@ final class StartView: UIView {
             startButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -70),
             startButton.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0),
             startButton.widthAnchor.constraint(equalToConstant: 200),
-            startButton.heightAnchor.constraint(equalToConstant: 50)
+            startButton.heightAnchor.constraint(equalToConstant: 50),
+            
+            computerGuessButton.topAnchor.constraint(equalTo: gameLabel.bottomAnchor, constant: 35),
+            computerGuessButton.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0),
+            computerGuessButton.widthAnchor.constraint(equalToConstant: 200),
+            computerGuessButton.heightAnchor.constraint(equalToConstant: 50),
+            
+            youGuessButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -70),
+            youGuessButton.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0),
+            youGuessButton.widthAnchor.constraint(equalToConstant: 200),
+            youGuessButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     

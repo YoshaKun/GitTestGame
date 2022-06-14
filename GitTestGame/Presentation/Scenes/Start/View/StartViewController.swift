@@ -58,8 +58,13 @@ class StartViewController: UIViewController {
 // MARK: - StartViewDelegate
 
 extension StartViewController: StartViewDelegate {
-    func didTappedStartButton() {
+    func didTappedYouGuessButton() {
         let secondViewController = SecondAssembley().viewController
         navigationController?.pushViewController(secondViewController, animated: true)
+    }
+    
+    func didTappedComputerGuessButton() {
+        let thirdViewController = ThirdAssembley().viewController
+        navigationController?.pushViewController(thirdViewController, animated: true)
     }
 }
