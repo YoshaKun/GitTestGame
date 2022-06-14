@@ -12,15 +12,33 @@ final class ComputerGuessManagerImp: ComputerGuessManager {
     
     // MARK: - Private properties
     
-    private let computerGuessSubject: CurrentValueSubject<Int, Never> = .init(Int.random(in: 0...100))
+    private let computerGuessSubject: CurrentValueSubject<Int, Never> = .init(0)
+    private var _counterOfGuesses = 0
     private var currentClosedRange: ClosedRange<Int> = 0...100
+}
+
+// MARK: - computerGuess: AnyPublisher<Int, Never>
+
+extension ComputerGuessManagerImp {
+    var computerGuess: AnyPublisher<Int, Never> {
+        return computerGuessSubject.eraseToAnyPublisher()
+    }
+}
+
+// MARK: - counterOfGuesses: AnyPublisher<Int, Never>
+
+extension ComputerGuessManagerImp {
+    var counterOfGuesses: Int {
+        return _counterOfGuesses
+    }
 }
 
 // MARK: - startGame()
 
 extension ComputerGuessManagerImp {
-    func startGame() -> AnyPublisher<Int, Never> {
-        return computerGuessSubject.eraseToAnyPublisher()
+    func startGame() {
+        computerGuessSubject.send(Int.random(in: 0...100))
+        _counterOfGuesses += 1
     }
 }
 
@@ -33,6 +51,7 @@ extension ComputerGuessManagerImp {
         let newValue = Int.random(in: currentClosedRange)
         
         computerGuessSubject.send(newValue)
+        _counterOfGuesses += 1
     }
 }
  
@@ -45,6 +64,7 @@ extension ComputerGuessManagerImp {
         let newValue = Int.random(in: currentClosedRange)
         
         computerGuessSubject.send(newValue)
+        _counterOfGuesses += 1
     }
 }
 
@@ -55,3 +75,17 @@ extension ComputerGuessManagerImp {
         computerGuessSubject.send(completion: .finished)
     }
 }
+
+
+#warning("RoadMap")
+
+/*
+ 
+ create enum Enum (less, more) ?
+ 
+ create PlayerGuessManager
+   var playerGuess: AnyPublisher<Enum, Never>
+   startGame() Int.random(in: 0...100)
+   compare(value: Int) if computerValue <>=; playerGuessSubject.send(Enum) of .send(completion: .finished)
+ сюда засунуть каунтер как в примере
+ */

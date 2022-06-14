@@ -8,7 +8,7 @@
 import Combine
 
 final class StartViewModelImp: StartViewModel {
-//    var nextRound: AnyPublisher<Void, Never>
+    //    var nextRound: AnyPublisher<Void, Never>
     
     
     // Third screen
@@ -37,20 +37,20 @@ extension StartViewModelImp {
     }
     
     func startGame() {
-        computerGuessManager.startGame()
-            .sink(receiveCompletion: { completion in
-                switch completion {
-                case .finished:
-                    print("end")
-                }
-            }, receiveValue: { [weak self] result in
-                self?.computerGuessValueSubject.send(result)
-            })
-            .store(in: &cancellableSet)
-        
-        computerGuessManager.wrongLess()
-        computerGuessManager.wrongLess()
-        computerGuessManager.wrongMore()
-        computerGuessManager.equal()
+//        computerGuessManager.startGame()
+//            .sink(receiveCompletion: { completion in
+//                switch completion {
+//                case .finished:
+//                    print("end")
+//                }
+//            }, receiveValue: { [weak self] result in
+//                self?.computerGuessValueSubject.send(result)
+//            })
+//            .store(in: &cancellableSet)
+//        
+//        computerGuessManager.wrongLess()
+//        computerGuessManager.wrongLess()
+//        computerGuessManager.wrongMore()
+//        computerGuessManager.equal()
     }
 }

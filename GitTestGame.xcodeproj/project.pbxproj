@@ -243,18 +243,18 @@
 		6BB57EB32843903E000BC737 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				6BB57EB62843907A000BC737 /* WeGuessManager */,
+				6BB57EB62843907A000BC737 /* ComputerGuess */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		6BB57EB62843907A000BC737 /* WeGuessManager */ = {
+		6BB57EB62843907A000BC737 /* ComputerGuess */ = {
 			isa = PBXGroup;
 			children = (
 				6BB57EB42843906F000BC737 /* ComputerGuessManager.swift */,
 				6BB57EB728439091000BC737 /* ComputerGuessManagerImp.swift */,
 			);
-			path = WeGuessManager;
+			path = ComputerGuess;
 			sourceTree = "<group>";
 		};
 		6BB57EB9284394BF000BC737 /* Entities */ = {

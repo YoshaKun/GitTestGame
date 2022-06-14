@@ -9,11 +9,12 @@ import Combine
 
 final class ThirdViewModelImp: ThirdViewModel {
 
-// MARK: - Private properties
+    // MARK: - Private properties
 
-private let computerGuessValueSubject: PassthroughSubject<Int, Never> = .init()
-
-// MARK: - Manager
+    private let computerGuessValueSubject: PassthroughSubject<Int, Never> = .init()
+    private let gameEndedSubject: PassthroughSubject<Int, Never> = .init()
+    
+    // MARK: - Manager
     
     private let computerGuessManager: ComputerGuessManager
     private var cancellableSet: Set<AnyCancellable> = []
@@ -22,6 +23,16 @@ private let computerGuessValueSubject: PassthroughSubject<Int, Never> = .init()
     
     init(computerGuessManager: ComputerGuessManager) {
         self.computerGuessManager = computerGuessManager
+        
+        computerGuessManager.computerGuess
+            .sink(receiveCompletion: { [weak self] _ in
+                guard let self = self else { return }
+                
+                self.gameEndedSubject.send(self.computerGuessManager.counterOfGuesses)
+            }, receiveValue: { [weak self] result in
+                self?.computerGuessValueSubject.send(result)
+            })
+            .store(in: &cancellableSet)
     }
 }
 
@@ -32,21 +43,23 @@ extension ThirdViewModelImp {
         return computerGuessValueSubject.eraseToAnyPublisher()
     }
     
+    var gameEnded: AnyPublisher<Int, Never> {
+        return gameEndedSubject.eraseToAnyPublisher()
+    }
+    
     func startGame() {
         computerGuessManager.startGame()
-            .sink(receiveCompletion: { completion in
-                switch completion {
-                case .finished:
-                    print("end")
-                }
-            }, receiveValue: { [weak self] result in
-                self?.computerGuessValueSubject.send(result)
-            })
-            .store(in: &cancellableSet)
-        
-        computerGuessManager.wrongMore()
+    }
+    
+    func wrongLess() {
         computerGuessManager.wrongLess()
+    }
+    
+    func wrongMore() {
         computerGuessManager.wrongMore()
+    }
+    
+    func equal() {
         computerGuessManager.equal()
     }
 }

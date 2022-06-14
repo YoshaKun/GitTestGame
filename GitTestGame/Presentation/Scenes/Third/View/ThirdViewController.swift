@@ -28,8 +28,17 @@ class ThirdViewController: UIViewController {
     
     private func configureBindings() {
         viewModel.computerGuessValue
-            .sink{ [weak self] result in
+            .sink { [weak self] result in
                 self?.thirdView.set(value: result)
+            }
+            .store(in: &cancellableSet)
+        
+        viewModel.gameEnded
+            .sink { [weak self] result in
+                #warning("4 screen")
+                let startAssembly = StartAssembly()
+                
+                self?.navigationController?.pushViewController(startAssembly.viewController, animated: true)
             }
             .store(in: &cancellableSet)
     }
@@ -43,10 +52,30 @@ class ThirdViewController: UIViewController {
     override func loadView() {
         super.loadView()
         
+        thirdView.delegate = self
+        
         view = thirdView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel.startGame()
+    }
+}
+
+// MARK: - ThirdViewDelegate
+
+extension ThirdViewController: ThirdViewDelegate {
+    func didTappedLessButton() {
+        viewModel.wrongLess()
+    }
+    
+    func didTappedEqualButton() {
+        viewModel.equal()
+    }
+    
+    func didTappedMoreButton() {
+        viewModel.wrongMore()
     }
 }

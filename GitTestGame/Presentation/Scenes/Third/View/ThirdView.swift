@@ -7,11 +7,18 @@
 
 import UIKit
 
-//protocol ThirdViewDelegate: AnyObject {
-//    func didTapped
-//}
+protocol ThirdViewDelegate: AnyObject {
+    func didTappedLessButton()
+    func didTappedEqualButton()
+    func didTappedMoreButton()
+}
 
 final class ThirdView: UIView {
+    
+    // MARK: - Public properties
+    
+    weak var delegate: ThirdViewDelegate?
+    
     // MARK: - View properties
     
     private let roundLabel = UILabel()
@@ -79,15 +86,15 @@ final class ThirdView: UIView {
     }
     
     @objc private func didTappedLessButton() {
-        print("<")
+        delegate?.didTappedLessButton()
     }
     
     @objc private func didTappedEqualButton() {
-        print("=")
+        delegate?.didTappedEqualButton()
     }
     
     @objc private func didTappedMoreButton() {
-        print(">")
+        delegate?.didTappedMoreButton()
     }
     
     // MARK: - Constraints
@@ -132,7 +139,7 @@ final class ThirdView: UIView {
     }
 }
 
-extension ThirdView {
+extension ThirdView {    
     func set(value: Int) {
         guessNumberLabel.text = "computer guess: \(value)"
     }

@@ -8,7 +8,10 @@
 import Combine
 
 protocol ComputerGuessManager {
-    func startGame() -> AnyPublisher<Int, Never>
+    var computerGuess: AnyPublisher<Int, Never> { get }
+    var counterOfGuesses: Int { get }
+    
+    func startGame()
     func wrongLess()
     func wrongMore()
     func equal()
