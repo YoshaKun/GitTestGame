@@ -75,17 +75,3 @@ extension ComputerGuessManagerImp {
         computerGuessSubject.send(completion: .finished)
     }
 }
-
-
-#warning("RoadMap")
-
-/*
- 
- create enum Enum (less, more) ?
- 
- create PlayerGuessManager
-   var playerGuess: AnyPublisher<Enum, Never>
-   startGame() Int.random(in: 0...100)
-   compare(value: Int) if computerValue <>=; playerGuessSubject.send(Enum) of .send(completion: .finished)
- сюда засунуть каунтер как в примере
- */

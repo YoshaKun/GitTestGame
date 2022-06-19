@@ -16,6 +16,12 @@ final class SecondAssembley {
     // MARK: - ViewModel
         
     private var viewModel: SecondViewModel {
-        return SecondViewModelImp()
+        return SecondViewModelImp(playerGuessManager: playerGuessManager)
+    }
+    
+    // MARK: - Managers
+    
+    private var playerGuessManager: PlayerGuessManager {
+        PlayerGuessManagerImp()
     }
 }
