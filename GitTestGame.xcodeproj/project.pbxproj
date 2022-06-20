@@ -17,6 +17,9 @@
 		6B70BE342860EB4600B1A48A /* AfterSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B70BE332860EB4600B1A48A /* AfterSecondViewController.swift */; };
 		6B70BE362860EB6400B1A48A /* AfterSecondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B70BE352860EB6400B1A48A /* AfterSecondViewModel.swift */; };
 		6B70BE382860EB8900B1A48A /* AfterSecondViewModelImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B70BE372860EB8900B1A48A /* AfterSecondViewModelImp.swift */; };
+		6B70BE3E2860F5F600B1A48A /* FinalAssembley.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B70BE3D2860F5F600B1A48A /* FinalAssembley.swift */; };
+		6B70BE402860F62C00B1A48A /* FinalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B70BE3F2860F62C00B1A48A /* FinalView.swift */; };
+		6B70BE422860F63A00B1A48A /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B70BE412860F63A00B1A48A /* FinalViewController.swift */; };
 		6B7BDEBB284256CE002FBD1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDEBA284256CE002FBD1E /* AppDelegate.swift */; };
 		6B7BDEBD284256CE002FBD1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDEBC284256CE002FBD1E /* SceneDelegate.swift */; };
 		6B7BDEBF284256CE002FBD1E /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDEBE284256CE002FBD1E /* StartViewController.swift */; };
@@ -54,6 +57,9 @@
 		6B70BE332860EB4600B1A48A /* AfterSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterSecondViewController.swift; sourceTree = "<group>"; };
 		6B70BE352860EB6400B1A48A /* AfterSecondViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterSecondViewModel.swift; sourceTree = "<group>"; };
 		6B70BE372860EB8900B1A48A /* AfterSecondViewModelImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterSecondViewModelImp.swift; sourceTree = "<group>"; };
+		6B70BE3D2860F5F600B1A48A /* FinalAssembley.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalAssembley.swift; sourceTree = "<group>"; };
+		6B70BE3F2860F62C00B1A48A /* FinalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalView.swift; sourceTree = "<group>"; };
+		6B70BE412860F63A00B1A48A /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		6B7BDEB7284256CE002FBD1E /* GitTestGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitTestGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B7BDEBA284256CE002FBD1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B7BDEBC284256CE002FBD1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +171,40 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		6B70BE392860F56100B1A48A /* Final */ = {
+			isa = PBXGroup;
+			children = (
+				6B70BE3A2860F5C200B1A48A /* Assembley */,
+				6B70BE3B2860F5CA00B1A48A /* View */,
+				6B70BE3C2860F5D800B1A48A /* ViewModel */,
+			);
+			path = Final;
+			sourceTree = "<group>";
+		};
+		6B70BE3A2860F5C200B1A48A /* Assembley */ = {
+			isa = PBXGroup;
+			children = (
+				6B70BE3D2860F5F600B1A48A /* FinalAssembley.swift */,
+			);
+			path = Assembley;
+			sourceTree = "<group>";
+		};
+		6B70BE3B2860F5CA00B1A48A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B70BE3F2860F62C00B1A48A /* FinalView.swift */,
+				6B70BE412860F63A00B1A48A /* FinalViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B70BE3C2860F5D800B1A48A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		6B7BDEAE284256CE002FBD1E = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +305,7 @@
 				6B70BE2B2860EA2700B1A48A /* AfterSecond */,
 				6BB05CE5284BB01C00DC6C88 /* Third */,
 				6B70BE1D2860E36400B1A48A /* AfterThird */,
+				6B70BE392860F56100B1A48A /* Final */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -450,6 +491,7 @@
 				6B7BDEBF284256CE002FBD1E /* StartViewController.swift in Sources */,
 				6B70BE262860E45100B1A48A /* AfterThirdViewModelImp.swift in Sources */,
 				6B70BE302860EA9800B1A48A /* AfterSecondAssembley.swift in Sources */,
+				6B70BE402860F62C00B1A48A /* FinalView.swift in Sources */,
 				6BB57EAB284385BA000BC737 /* SecondViewModel.swift in Sources */,
 				6B7BDEBB284256CE002FBD1E /* AppDelegate.swift in Sources */,
 				6BB57EA128437CE8000BC737 /* StartViewModel.swift in Sources */,
@@ -459,6 +501,7 @@
 				6B70BE362860EB6400B1A48A /* AfterSecondViewModel.swift in Sources */,
 				6BB57EA328437D41000BC737 /* StartViewModelImp.swift in Sources */,
 				6BB57EB52843906F000BC737 /* ComputerGuessManager.swift in Sources */,
+				6B70BE422860F63A00B1A48A /* FinalViewController.swift in Sources */,
 				6B70BE222860E3C800B1A48A /* AfterThirdAssembley.swift in Sources */,
 				6B70BE2A2860E62100B1A48A /* AfterThirdViewController.swift in Sources */,
 				6BB05CF2284BB0BE00DC6C88 /* ThirdViewModelImp.swift in Sources */,
@@ -471,6 +514,7 @@
 				6B7D6CDE285F0123009D2558 /* ComparePlayerGuess.swift in Sources */,
 				6B70BE382860EB8900B1A48A /* AfterSecondViewModelImp.swift in Sources */,
 				6B70BE282860E59800B1A48A /* AfterThirdView.swift in Sources */,
+				6B70BE3E2860F5F600B1A48A /* FinalAssembley.swift in Sources */,
 				6BB05CEA284BB05E00DC6C88 /* ThirdAssembley.swift in Sources */,
 				6BB57EAD284385CB000BC737 /* SecondViewModelImp.swift in Sources */,
 				6BB57EAF28438666000BC737 /* SecondAssembley.swift in Sources */,

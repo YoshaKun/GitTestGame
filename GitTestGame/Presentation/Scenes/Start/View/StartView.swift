@@ -40,8 +40,8 @@ final class StartView: UIView {
         gameLabel.text = "Guess Game"
         gameLabel.textColor = .black
         gameLabel.font = .systemFont(ofSize: 50, weight: .bold)
-        gameLabel.translatesAutoresizingMaskIntoConstraints = false
         gameLabel.numberOfLines = 0
+        gameLabel.translatesAutoresizingMaskIntoConstraints = false
         
         startButton.setTitle("Start a New Game!", for: .normal)
         startButton.clipsToBounds = true
