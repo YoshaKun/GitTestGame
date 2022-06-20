@@ -1,24 +1,24 @@
 //
-//  ThirdViewController.swift
+//  AfterSecondViewController.swift
 //  GitTestGame
 //
-//  Created by Yosha Kun on 04.06.2022.
+//  Created by Yosha Kun on 20.06.2022.
 //
 
 import UIKit
 import Combine
 
-class ThirdViewController: UIViewController {
+class AfterSecondViewController: UIViewController {
     
     // MARK: - Private properties
     
-    private let viewModel: ThirdViewModel
-    private let thirdView: ThirdView = .init()
+    private let viewModel: AfterSecondViewModel
+    private let thirdView: AfterSecondView = .init()
     private var cancellableSet: Set<AnyCancellable> = []
     
     // MARK: - Initialization
     
-    init(viewModel: ThirdViewModel) {
+    init(viewModel: AfterSecondViewModel) {
         self.viewModel = viewModel
         
         super.init(nibName: nil, bundle: nil)
@@ -32,12 +32,12 @@ class ThirdViewController: UIViewController {
                 self?.thirdView.set(value: result)
             }
             .store(in: &cancellableSet)
-        
+#warning("create finalscreen")
         viewModel.gameEnded
             .sink { [weak self] result in
-                let afterThirdAssembley = AfterThirdAssembley()
+                let startScreen = StartAssembly()
                 
-                self?.navigationController?.pushViewController(afterThirdAssembley.viewController, animated: true)
+                self?.navigationController?.pushViewController(startScreen.viewController, animated: true)
             }
             .store(in: &cancellableSet)
     }
@@ -65,16 +65,16 @@ class ThirdViewController: UIViewController {
 
 // MARK: - ThirdViewDelegate
 
-extension ThirdViewController: ThirdViewDelegate {
-    func didTappedLessButton() {
+extension AfterSecondViewController: AfterSecondViewDelegate {
+    func didTappedNewLessButton() {
         viewModel.wrongLess()
     }
     
-    func didTappedEqualButton() {
+    func didTappedNewEqualButton() {
         viewModel.equal()
     }
     
-    func didTappedMoreButton() {
+    func didTappedNewMoreButton() {
         viewModel.wrongMore()
     }
 }

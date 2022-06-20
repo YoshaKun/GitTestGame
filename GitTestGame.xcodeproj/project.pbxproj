@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B70BE222860E3C800B1A48A /* AfterThirdAssembley.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B70BE212860E3C800B1A48A /* AfterThirdAssembley.swift */; };
+		6B70BE242860E43B00B1A48A /* AfterThirdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B70BE232860E43B00B1A48A /* AfterThirdViewModel.swift */; };
+		6B70BE262860E45100B1A48A /* AfterThirdViewModelImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B70BE252860E45100B1A48A /* AfterThirdViewModelImp.swift */; };
+		6B70BE282860E59800B1A48A /* AfterThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B70BE272860E59800B1A48A /* AfterThirdView.swift */; };
+		6B70BE2A2860E62100B1A48A /* AfterThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B70BE292860E62100B1A48A /* AfterThirdViewController.swift */; };
+		6B70BE302860EA9800B1A48A /* AfterSecondAssembley.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B70BE2F2860EA9800B1A48A /* AfterSecondAssembley.swift */; };
+		6B70BE322860EB3700B1A48A /* AfterSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B70BE312860EB3700B1A48A /* AfterSecondView.swift */; };
+		6B70BE342860EB4600B1A48A /* AfterSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B70BE332860EB4600B1A48A /* AfterSecondViewController.swift */; };
+		6B70BE362860EB6400B1A48A /* AfterSecondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B70BE352860EB6400B1A48A /* AfterSecondViewModel.swift */; };
+		6B70BE382860EB8900B1A48A /* AfterSecondViewModelImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B70BE372860EB8900B1A48A /* AfterSecondViewModelImp.swift */; };
 		6B7BDEBB284256CE002FBD1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDEBA284256CE002FBD1E /* AppDelegate.swift */; };
 		6B7BDEBD284256CE002FBD1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDEBC284256CE002FBD1E /* SceneDelegate.swift */; };
 		6B7BDEBF284256CE002FBD1E /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7BDEBE284256CE002FBD1E /* StartViewController.swift */; };
@@ -34,6 +44,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B70BE212860E3C800B1A48A /* AfterThirdAssembley.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterThirdAssembley.swift; sourceTree = "<group>"; };
+		6B70BE232860E43B00B1A48A /* AfterThirdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterThirdViewModel.swift; sourceTree = "<group>"; };
+		6B70BE252860E45100B1A48A /* AfterThirdViewModelImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterThirdViewModelImp.swift; sourceTree = "<group>"; };
+		6B70BE272860E59800B1A48A /* AfterThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterThirdView.swift; sourceTree = "<group>"; };
+		6B70BE292860E62100B1A48A /* AfterThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterThirdViewController.swift; sourceTree = "<group>"; };
+		6B70BE2F2860EA9800B1A48A /* AfterSecondAssembley.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterSecondAssembley.swift; sourceTree = "<group>"; };
+		6B70BE312860EB3700B1A48A /* AfterSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterSecondView.swift; sourceTree = "<group>"; };
+		6B70BE332860EB4600B1A48A /* AfterSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterSecondViewController.swift; sourceTree = "<group>"; };
+		6B70BE352860EB6400B1A48A /* AfterSecondViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterSecondViewModel.swift; sourceTree = "<group>"; };
+		6B70BE372860EB8900B1A48A /* AfterSecondViewModelImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterSecondViewModelImp.swift; sourceTree = "<group>"; };
 		6B7BDEB7284256CE002FBD1E /* GitTestGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitTestGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B7BDEBA284256CE002FBD1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B7BDEBC284256CE002FBD1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +93,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B70BE1D2860E36400B1A48A /* AfterThird */ = {
+			isa = PBXGroup;
+			children = (
+				6B70BE1E2860E39000B1A48A /* Assembley */,
+				6B70BE202860E3A300B1A48A /* VeiwModel */,
+				6B70BE1F2860E39C00B1A48A /* View */,
+			);
+			path = AfterThird;
+			sourceTree = "<group>";
+		};
+		6B70BE1E2860E39000B1A48A /* Assembley */ = {
+			isa = PBXGroup;
+			children = (
+				6B70BE212860E3C800B1A48A /* AfterThirdAssembley.swift */,
+			);
+			path = Assembley;
+			sourceTree = "<group>";
+		};
+		6B70BE1F2860E39C00B1A48A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B70BE272860E59800B1A48A /* AfterThirdView.swift */,
+				6B70BE292860E62100B1A48A /* AfterThirdViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B70BE202860E3A300B1A48A /* VeiwModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B70BE232860E43B00B1A48A /* AfterThirdViewModel.swift */,
+				6B70BE252860E45100B1A48A /* AfterThirdViewModelImp.swift */,
+			);
+			path = VeiwModel;
+			sourceTree = "<group>";
+		};
+		6B70BE2B2860EA2700B1A48A /* AfterSecond */ = {
+			isa = PBXGroup;
+			children = (
+				6B70BE2C2860EA6100B1A48A /* Assembley */,
+				6B70BE2D2860EA6F00B1A48A /* View */,
+				6B70BE2E2860EA7600B1A48A /* ViewModel */,
+			);
+			path = AfterSecond;
+			sourceTree = "<group>";
+		};
+		6B70BE2C2860EA6100B1A48A /* Assembley */ = {
+			isa = PBXGroup;
+			children = (
+				6B70BE2F2860EA9800B1A48A /* AfterSecondAssembley.swift */,
+			);
+			path = Assembley;
+			sourceTree = "<group>";
+		};
+		6B70BE2D2860EA6F00B1A48A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B70BE312860EB3700B1A48A /* AfterSecondView.swift */,
+				6B70BE332860EB4600B1A48A /* AfterSecondViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B70BE2E2860EA7600B1A48A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B70BE352860EB6400B1A48A /* AfterSecondViewModel.swift */,
+				6B70BE372860EB8900B1A48A /* AfterSecondViewModelImp.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		6B7BDEAE284256CE002FBD1E = {
 			isa = PBXGroup;
 			children = (
@@ -170,7 +262,9 @@
 			children = (
 				6BB57E9C28437B09000BC737 /* Start */,
 				6BB57EA628438314000BC737 /* Second */,
+				6B70BE2B2860EA2700B1A48A /* AfterSecond */,
 				6BB05CE5284BB01C00DC6C88 /* Third */,
+				6B70BE1D2860E36400B1A48A /* AfterThird */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -354,19 +448,29 @@
 				6B7BDEF528428C45002FBD1E /* SecondView.swift in Sources */,
 				6BB57EA52843820F000BC737 /* StartAssembly.swift in Sources */,
 				6B7BDEBF284256CE002FBD1E /* StartViewController.swift in Sources */,
+				6B70BE262860E45100B1A48A /* AfterThirdViewModelImp.swift in Sources */,
+				6B70BE302860EA9800B1A48A /* AfterSecondAssembley.swift in Sources */,
 				6BB57EAB284385BA000BC737 /* SecondViewModel.swift in Sources */,
 				6B7BDEBB284256CE002FBD1E /* AppDelegate.swift in Sources */,
 				6BB57EA128437CE8000BC737 /* StartViewModel.swift in Sources */,
 				6B7D6CE0285F03C0009D2558 /* PlayerGuessManager.swift in Sources */,
 				6BB05CEE284BB08600DC6C88 /* ThirdView.swift in Sources */,
 				6B7BDEBD284256CE002FBD1E /* SceneDelegate.swift in Sources */,
+				6B70BE362860EB6400B1A48A /* AfterSecondViewModel.swift in Sources */,
 				6BB57EA328437D41000BC737 /* StartViewModelImp.swift in Sources */,
 				6BB57EB52843906F000BC737 /* ComputerGuessManager.swift in Sources */,
+				6B70BE222860E3C800B1A48A /* AfterThirdAssembley.swift in Sources */,
+				6B70BE2A2860E62100B1A48A /* AfterThirdViewController.swift in Sources */,
 				6BB05CF2284BB0BE00DC6C88 /* ThirdViewModelImp.swift in Sources */,
+				6B70BE322860EB3700B1A48A /* AfterSecondView.swift in Sources */,
+				6B70BE342860EB4600B1A48A /* AfterSecondViewController.swift in Sources */,
+				6B70BE242860E43B00B1A48A /* AfterThirdViewModel.swift in Sources */,
 				6B7BDEF328428C3A002FBD1E /* SecondViewController.swift in Sources */,
 				6BB57EB828439091000BC737 /* ComputerGuessManagerImp.swift in Sources */,
 				6BB05CF0284BB0AC00DC6C88 /* ThirdViewModel.swift in Sources */,
 				6B7D6CDE285F0123009D2558 /* ComparePlayerGuess.swift in Sources */,
+				6B70BE382860EB8900B1A48A /* AfterSecondViewModelImp.swift in Sources */,
+				6B70BE282860E59800B1A48A /* AfterThirdView.swift in Sources */,
 				6BB05CEA284BB05E00DC6C88 /* ThirdAssembley.swift in Sources */,
 				6BB57EAD284385CB000BC737 /* SecondViewModelImp.swift in Sources */,
 				6BB57EAF28438666000BC737 /* SecondAssembley.swift in Sources */,

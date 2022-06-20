@@ -35,7 +35,9 @@ class SecondViewController: UIViewController {
         
         viewModel.gameEnded
             .sink { [weak self] result in
-                print("END")
+                let afterSecondScreen = AfterSecondAssembley()
+                
+                self?.navigationController?.pushViewController(afterSecondScreen.viewController, animated: true)
             }
             .store(in: &cancellableSet)
     }

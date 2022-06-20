@@ -1,23 +1,23 @@
 //
-//  ThirdView.swift
+//  AfterSecondView.swift
 //  GitTestGame
 //
-//  Created by Yosha Kun on 04.06.2022.
+//  Created by Yosha Kun on 20.06.2022.
 //
 
 import UIKit
 
-protocol ThirdViewDelegate: AnyObject {
-    func didTappedLessButton()
-    func didTappedEqualButton()
-    func didTappedMoreButton()
+protocol AfterSecondViewDelegate: AnyObject {
+    func didTappedNewLessButton()
+    func didTappedNewEqualButton()
+    func didTappedNewMoreButton()
 }
 
-final class ThirdView: UIView {
+final class AfterSecondView: UIView {
     
     // MARK: - Public properties
     
-    weak var delegate: ThirdViewDelegate?
+    weak var delegate: AfterSecondViewDelegate?
     
     // MARK: - View properties
     
@@ -63,7 +63,7 @@ final class ThirdView: UIView {
         lessButton.backgroundColor = .black
         lessButton.setTitleColor(.white, for: .normal)
         lessButton.setTitleColor(.systemBlue, for: .highlighted)
-        lessButton.addTarget(self, action: #selector(didTappedLessButton), for: .touchUpInside)
+        lessButton.addTarget(self, action: #selector(didTappedNewLessButton), for: .touchUpInside)
         lessButton.translatesAutoresizingMaskIntoConstraints = false
         
         equalButton.setTitle("=", for: .normal)
@@ -72,7 +72,7 @@ final class ThirdView: UIView {
         equalButton.backgroundColor = .black
         equalButton.setTitleColor(.white, for: .normal)
         equalButton.setTitleColor(.systemBlue, for: .highlighted)
-        equalButton.addTarget(self, action: #selector(didTappedEqualButton), for: .touchUpInside)
+        equalButton.addTarget(self, action: #selector(didTappedNewEqualButton), for: .touchUpInside)
         equalButton.translatesAutoresizingMaskIntoConstraints = false
         
         moreButton.setTitle(">", for: .normal)
@@ -81,20 +81,20 @@ final class ThirdView: UIView {
         moreButton.backgroundColor = .black
         moreButton.setTitleColor(.white, for: .normal)
         moreButton.setTitleColor(.systemBlue, for: .highlighted)
-        moreButton.addTarget(self, action: #selector(didTappedMoreButton), for: .touchUpInside)
+        moreButton.addTarget(self, action: #selector(didTappedNewMoreButton), for: .touchUpInside)
         moreButton.translatesAutoresizingMaskIntoConstraints = false
     }
     
-    @objc private func didTappedLessButton() {
-        delegate?.didTappedLessButton()
+    @objc private func didTappedNewLessButton() {
+        delegate?.didTappedNewLessButton()
     }
     
-    @objc private func didTappedEqualButton() {
-        delegate?.didTappedEqualButton()
+    @objc private func didTappedNewEqualButton() {
+        delegate?.didTappedNewEqualButton()
     }
     
-    @objc private func didTappedMoreButton() {
-        delegate?.didTappedMoreButton()
+    @objc private func didTappedNewMoreButton() {
+        delegate?.didTappedNewMoreButton()
     }
     
     // MARK: - Constraints
@@ -139,7 +139,7 @@ final class ThirdView: UIView {
     }
 }
 
-extension ThirdView {    
+extension AfterSecondView {
     func set(value: Int) {
         guessNumberLabel.text = "THE NUMBER IS: \(value)?"
     }

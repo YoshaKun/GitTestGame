@@ -1,24 +1,24 @@
 //
-//  ThirdViewController.swift
+//  AfterThirdViewController.swift
 //  GitTestGame
 //
-//  Created by Yosha Kun on 04.06.2022.
+//  Created by Yosha Kun on 20.06.2022.
 //
 
 import UIKit
 import Combine
 
-class ThirdViewController: UIViewController {
+class AfterThirdViewController: UIViewController {
     
     // MARK: - Private properties
     
-    private let viewModel: ThirdViewModel
-    private let thirdView: ThirdView = .init()
+    private let viewModel: AfterThirdViewModel
+    private let secondView: AfterThirdView = .init()
     private var cancellableSet: Set<AnyCancellable> = []
     
     // MARK: - Initialization
     
-    init(viewModel: ThirdViewModel) {
+    init(viewModel: AfterThirdViewModel) {
         self.viewModel = viewModel
         
         super.init(nibName: nil, bundle: nil)
@@ -27,17 +27,17 @@ class ThirdViewController: UIViewController {
     }
     
     private func configureBindings() {
-        viewModel.computerGuessValue
+        viewModel.compareResult
             .sink { [weak self] result in
-                self?.thirdView.set(value: result)
+                self?.secondView.set(compareResult: result)
             }
             .store(in: &cancellableSet)
         
         viewModel.gameEnded
             .sink { [weak self] result in
-                let afterThirdAssembley = AfterThirdAssembley()
+                let startScreen = StartAssembly()
                 
-                self?.navigationController?.pushViewController(afterThirdAssembley.viewController, animated: true)
+                self?.navigationController?.pushViewController(startScreen.viewController, animated: true)
             }
             .store(in: &cancellableSet)
     }
@@ -51,9 +51,9 @@ class ThirdViewController: UIViewController {
     override func loadView() {
         super.loadView()
         
-        thirdView.delegate = self
+        secondView.delegate = self
         
-        view = thirdView
+        view = secondView
     }
     
     override func viewDidLoad() {
@@ -63,18 +63,10 @@ class ThirdViewController: UIViewController {
     }
 }
 
-// MARK: - ThirdViewDelegate
+// MARK: - SecondViewDelegate
 
-extension ThirdViewController: ThirdViewDelegate {
-    func didTappedLessButton() {
-        viewModel.wrongLess()
-    }
-    
-    func didTappedEqualButton() {
-        viewModel.equal()
-    }
-    
-    func didTappedMoreButton() {
-        viewModel.wrongMore()
+extension AfterThirdViewController: AfterThirdViewDelegate {
+    func didTapNewCheckButton(with value: Int) {
+        viewModel.compare(value: value)
     }
 }
