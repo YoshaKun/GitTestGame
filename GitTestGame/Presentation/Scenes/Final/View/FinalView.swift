@@ -35,13 +35,13 @@ final class FinalView: UIView {
         
         gameLabel.text = "CONGRATULATIONS"
         gameLabel.textColor = .black
-        gameLabel.font = .systemFont(ofSize: 50, weight: .bold)
+        gameLabel.font = .systemFont(ofSize: 35, weight: .bold)
         gameLabel.numberOfLines = 0
         gameLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        scoreLabel.text = "YOU WIN!"
+        scoreLabel.text = "****"
         scoreLabel.textColor = .black
-        scoreLabel.font = .systemFont(ofSize: 50, weight: .bold)
+        scoreLabel.font = .systemFont(ofSize: 35, weight: .bold)
         scoreLabel.numberOfLines = 0
         scoreLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -56,7 +56,7 @@ final class FinalView: UIView {
     }
     
     @objc private func didTappedReturnButton() {
-        delegate?didTappedReturnButton()
+//        delegate?didTappedReturnButton()
     }
     
     private func configureLayouts() {
@@ -81,8 +81,8 @@ final class FinalView: UIView {
     }
 }
 
-//extension FinalView {
-//    func set(value: String) {
-//        scoreLabel.text = "\(value)"
-//    }
-//}
+extension FinalView {
+    func set(result: String) {
+        scoreLabel.text = "\(result)"
+    }
+}

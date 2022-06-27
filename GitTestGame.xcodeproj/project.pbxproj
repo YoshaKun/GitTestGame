@@ -31,6 +31,8 @@
 		6B7D6CDE285F0123009D2558 /* ComparePlayerGuess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D6CDD285F0123009D2558 /* ComparePlayerGuess.swift */; };
 		6B7D6CE0285F03C0009D2558 /* PlayerGuessManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D6CDF285F03C0009D2558 /* PlayerGuessManager.swift */; };
 		6B7D6CE2285F04B8009D2558 /* PlayerGuessManagerImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7D6CE1285F04B8009D2558 /* PlayerGuessManagerImp.swift */; };
+		6B8E677E286A27DF00FF4583 /* FinalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8E677D286A27DF00FF4583 /* FinalViewModel.swift */; };
+		6B8E6780286A27EF00FF4583 /* FinalViewModelImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8E677F286A27EF00FF4583 /* FinalViewModelImp.swift */; };
 		6BB05CEA284BB05E00DC6C88 /* ThirdAssembley.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB05CE9284BB05E00DC6C88 /* ThirdAssembley.swift */; };
 		6BB05CEC284BB07000DC6C88 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB05CEB284BB07000DC6C88 /* ThirdViewController.swift */; };
 		6BB05CEE284BB08600DC6C88 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BB05CED284BB08600DC6C88 /* ThirdView.swift */; };
@@ -73,6 +75,8 @@
 		6B7D6CDD285F0123009D2558 /* ComparePlayerGuess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparePlayerGuess.swift; sourceTree = "<group>"; };
 		6B7D6CDF285F03C0009D2558 /* PlayerGuessManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerGuessManager.swift; sourceTree = "<group>"; };
 		6B7D6CE1285F04B8009D2558 /* PlayerGuessManagerImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerGuessManagerImp.swift; sourceTree = "<group>"; };
+		6B8E677D286A27DF00FF4583 /* FinalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewModel.swift; sourceTree = "<group>"; };
+		6B8E677F286A27EF00FF4583 /* FinalViewModelImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewModelImp.swift; sourceTree = "<group>"; };
 		6BB05CE9284BB05E00DC6C88 /* ThirdAssembley.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdAssembley.swift; sourceTree = "<group>"; };
 		6BB05CEB284BB07000DC6C88 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		6BB05CED284BB08600DC6C88 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
@@ -201,6 +205,8 @@
 		6B70BE3C2860F5D800B1A48A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				6B8E677D286A27DF00FF4583 /* FinalViewModel.swift */,
+				6B8E677F286A27EF00FF4583 /* FinalViewModelImp.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -519,6 +525,8 @@
 				6BB57EAD284385CB000BC737 /* SecondViewModelImp.swift in Sources */,
 				6BB57EAF28438666000BC737 /* SecondAssembley.swift in Sources */,
 				6BB05CEC284BB07000DC6C88 /* ThirdViewController.swift in Sources */,
+				6B8E677E286A27DF00FF4583 /* FinalViewModel.swift in Sources */,
+				6B8E6780286A27EF00FF4583 /* FinalViewModelImp.swift in Sources */,
 				6B7BDEF128428C27002FBD1E /* StartView.swift in Sources */,
 				6B7D6CE2285F04B8009D2558 /* PlayerGuessManagerImp.swift in Sources */,
 			);

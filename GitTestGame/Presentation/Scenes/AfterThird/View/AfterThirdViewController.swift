@@ -35,9 +35,9 @@ class AfterThirdViewController: UIViewController {
         
         viewModel.gameEnded
             .sink { [weak self] result in
-                let startScreen = StartAssembly()
+                let finalView = FinalAssembley()
                 
-                self?.navigationController?.pushViewController(startScreen.viewController, animated: true)
+                self?.navigationController?.pushViewController(finalView.viewController, animated: true)
             }
             .store(in: &cancellableSet)
     }
