@@ -26,13 +26,7 @@ class StartViewController: UIViewController {
         configureBindings()
     }
     
-    private func configureBindings() {
-        viewModel.computerGuessValue
-            .sink { [weak self] result in
-                self?.startView.set(value: result)
-            }
-            .store(in: &cancellableSet)
-    }
+    private func configureBindings() {}
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -50,8 +44,6 @@ class StartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        viewModel.startGame()
     }
 }
 

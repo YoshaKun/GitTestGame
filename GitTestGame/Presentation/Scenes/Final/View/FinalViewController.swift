@@ -25,7 +25,7 @@ class FinalViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-// MARK: - Lifecycle methods
+    // MARK: - Lifecycle methods
     
     override func loadView() {
         super.loadView()
@@ -37,9 +37,7 @@ class FinalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.compareGuesses()
-        
-        finalView.set(result: viewModel.finalScoreString)
+        finalView.set(result: viewModel.compareGuesses())
     }
 }
 
@@ -47,7 +45,6 @@ class FinalViewController: UIViewController {
 
 extension FinalViewController: FinalViewDelegate {
     func didTappedReturnButton() {
-        let startViewController = StartAssembly().viewController
-        navigationController?.pushViewController(startViewController, animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
 }

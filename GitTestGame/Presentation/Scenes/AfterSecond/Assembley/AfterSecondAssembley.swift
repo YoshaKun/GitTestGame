@@ -22,6 +22,6 @@ final class AfterSecondAssembley {
     // MARK: - Managers
 
     private var computerGuessManager: ComputerGuessManager {
-        ComputerGuessManagerImp()
+        return ComputerGuessManagerImp.shared
     }
 }

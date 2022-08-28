@@ -22,10 +22,10 @@ final class FinalAssembley {
     // MARK: - Managers
     
     private var computerGuessManager: ComputerGuessManager {
-        ComputerGuessManagerImp()
+        return ComputerGuessManagerImp.shared
     }
     
     private var playerGuessManager: PlayerGuessManager {
-        PlayerGuessManagerImp()
+        return PlayerGuessManagerImp.shared
     }
 }

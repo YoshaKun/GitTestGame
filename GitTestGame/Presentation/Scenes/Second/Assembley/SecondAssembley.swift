@@ -22,6 +22,6 @@ final class SecondAssembley {
     // MARK: - Managers
     
     private var playerGuessManager: PlayerGuessManager {
-        PlayerGuessManagerImp()
+        return PlayerGuessManagerImp.shared
     }
 }

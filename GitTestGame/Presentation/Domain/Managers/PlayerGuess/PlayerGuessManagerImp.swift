@@ -9,11 +9,20 @@ import Foundation
 import Combine
 
 final class PlayerGuessManagerImp: PlayerGuessManager {
+    
+    // MARK: - shared
+    
+    static let shared: PlayerGuessManager = PlayerGuessManagerImp()
+    
     // MARK: - Private Properties
     
     private var comparePlayerGuessSubject: PassthroughSubject <ComparePlayerGuess, Never> = .init()
     private var _counterOfGuesses = 0
     private var computerValue = 0
+    
+    // MARK: - Initialization
+    
+    private init() {}
 }
 
 // MARK: - comparePlayerGuess: AnyPublisher<ComparePlayerGuess, Never>

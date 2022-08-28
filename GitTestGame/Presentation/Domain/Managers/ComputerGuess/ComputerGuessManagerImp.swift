@@ -10,11 +10,19 @@ import Combine
 
 final class ComputerGuessManagerImp: ComputerGuessManager {
     
+    // MARK: - shared
+    
+    static let shared: ComputerGuessManager = ComputerGuessManagerImp()
+    
     // MARK: - Private properties
     
     private let computerGuessSubject: CurrentValueSubject<Int, Never> = .init(0)
     private var _counterOfGuesses = 0
     private var currentClosedRange: ClosedRange<Int> = 0...100
+    
+    // MARK: - Initialization
+    
+    private init() {}
 }
 
 // MARK: - computerGuess: AnyPublisher<Int, Never>

@@ -7,10 +7,4 @@
 
 import Combine
 
-protocol StartViewModel {
-//    var nextRound: AnyPublisher<Void, Never> { get }
-
-    var computerGuessValue: AnyPublisher<Int, Never> { get }
-    
-    func startGame()
-}
+protocol StartViewModel {}

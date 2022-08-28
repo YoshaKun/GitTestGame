@@ -9,45 +9,30 @@ import Combine
 import Foundation
 
 final class FinalViewModelImp: FinalViewModel {
+    
     // MARK: - Managers
     
-    private let computerGuessManager: ComputerGuessManager
-    private let playerGuessManager: PlayerGuessManager
     private var cancellableSet: Set<AnyCancellable> = []
+    
+    // MARK: - Private properties
+    
+    private var computerGuessCounter: Int
+    private var playerGuessCounter: Int
     
     // MARK: - Initialization
     
     init(computerGuessManager: ComputerGuessManager, playerGuessManager: PlayerGuessManager) {
-        self.computerGuessManager = computerGuessManager
-        self.playerGuessManager = playerGuessManager
+        computerGuessCounter = computerGuessManager.counterOfGuesses
+        playerGuessCounter = playerGuessManager.counterOfGuesses
     }
-    
-    // MARK: - Private properties
-    private var computerGuessCounterSubject: Int = 0
-    private var playerGuessCounterSubject: Int = 0
-    private var finalScoreStringSubject: String = "формула не работает"
-    
-    
 }
 
 extension FinalViewModelImp {
-    var computerGuessCounter: Int {
-        return computerGuessCounterSubject
-    }
-    
-    var playerGuessCounter: Int {
-        return playerGuessCounterSubject
-    }
-    
-    func compareGuesses() {
-        if computerGuessCounterSubject > playerGuessCounterSubject {
-            finalScoreStringSubject = "You Lose!"
-        } else if computerGuessCounterSubject < playerGuessCounterSubject {
-            finalScoreStringSubject = "You Win!"
+    func compareGuesses() -> String {
+        if computerGuessCounter > playerGuessCounter {
+            return "You Win!"
+        } else {
+            return "You Lose!"
         }
-    }
-    
-    var finalScoreString: String {
-        return finalScoreStringSubject
     }
 }

@@ -16,12 +16,6 @@ final class StartAssembly {
     // MARK: - ViewModel
     
     private var viewModel: StartViewModel {
-        return StartViewModelImp(computerGuessManager: computerGuessManager)
-    }
-    
-    // MARK: - Managers
-    
-    private var computerGuessManager: ComputerGuessManager {
-        ComputerGuessManagerImp()
+        return StartViewModelImp()
     }
 }

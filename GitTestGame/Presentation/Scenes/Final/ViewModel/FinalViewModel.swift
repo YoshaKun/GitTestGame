@@ -8,12 +8,5 @@
 import Combine
 
 protocol FinalViewModel {
-    
-    var computerGuessCounter: Int { get }
-    
-    var playerGuessCounter: Int { get }
-    
-    var finalScoreString: String { get }
-    
-    func compareGuesses()
+    func compareGuesses() -> String
 }

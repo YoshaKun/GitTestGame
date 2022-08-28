@@ -21,6 +21,6 @@ final class AfterThirdAssembley {
     // MARK: - Managers
 
     private var playerGuessManager: PlayerGuessManager {
-        PlayerGuessManagerImp()
+        return PlayerGuessManagerImp.shared
     }
 }
