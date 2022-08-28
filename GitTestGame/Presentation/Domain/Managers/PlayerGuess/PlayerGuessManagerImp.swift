@@ -36,6 +36,7 @@ extension PlayerGuessManagerImp {
         computerValue = Int.random(in: 0...100)
         
         _counterOfGuesses += 1
+        print(_counterOfGuesses)
     }
 }
 
@@ -45,9 +46,11 @@ extension PlayerGuessManagerImp {
         if value < computerValue {
             comparePlayerGuessSubject.send(ComparePlayerGuess.more)
             _counterOfGuesses += 1
+            print(_counterOfGuesses)
         } else if value > computerValue {
             comparePlayerGuessSubject.send(ComparePlayerGuess.less)
             _counterOfGuesses += 1
+            print(_counterOfGuesses)
         } else if value == computerValue {
             comparePlayerGuessSubject.send(completion: .finished)
         }

@@ -9,12 +9,6 @@ import Combine
 import Foundation
 
 final class FinalViewModelImp: FinalViewModel {
-    
-    // MARK: - Private properties
-    private let computerGuessCounterSubject: Int = 0
-    private let playerGuessCounterSubject: Int = 0
-    private var finalScoreStringSubject: String = "формула не работает"
-    
     // MARK: - Managers
     
     private let computerGuessManager: ComputerGuessManager
@@ -27,6 +21,13 @@ final class FinalViewModelImp: FinalViewModel {
         self.computerGuessManager = computerGuessManager
         self.playerGuessManager = playerGuessManager
     }
+    
+    // MARK: - Private properties
+    private var computerGuessCounterSubject: Int = 0
+    private var playerGuessCounterSubject: Int = 0
+    private var finalScoreStringSubject: String = "формула не работает"
+    
+    
 }
 
 extension FinalViewModelImp {

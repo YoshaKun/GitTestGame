@@ -39,6 +39,7 @@ extension ComputerGuessManagerImp {
     func startGame() {
         computerGuessSubject.send(Int.random(in: 0...100))
         _counterOfGuesses += 1
+        print(_counterOfGuesses)
     }
 }
 
@@ -52,6 +53,7 @@ extension ComputerGuessManagerImp {
         
         computerGuessSubject.send(newValue)
         _counterOfGuesses += 1
+        print(_counterOfGuesses)
     }
 }
  
@@ -65,6 +67,7 @@ extension ComputerGuessManagerImp {
         
         computerGuessSubject.send(newValue)
         _counterOfGuesses += 1
+        print(_counterOfGuesses)
     }
 }
 
