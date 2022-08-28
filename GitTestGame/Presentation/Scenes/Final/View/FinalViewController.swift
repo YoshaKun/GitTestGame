@@ -30,6 +30,7 @@ class FinalViewController: UIViewController {
     override func loadView() {
         super.loadView()
         
+        finalView.delegate = self
         view = finalView
     }
     
@@ -39,5 +40,14 @@ class FinalViewController: UIViewController {
         viewModel.compareGuesses()
         
         finalView.set(result: viewModel.finalScoreString)
+    }
+}
+
+// MARK: - FinalViewDelegate
+
+extension FinalViewController: FinalViewDelegate {
+    func didTappedReturnButton() {
+        let startViewController = StartAssembly().viewController
+        navigationController?.pushViewController(startViewController, animated: true)
     }
 }

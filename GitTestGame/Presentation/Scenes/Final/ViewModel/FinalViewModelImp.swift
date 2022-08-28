@@ -13,7 +13,7 @@ final class FinalViewModelImp: FinalViewModel {
     // MARK: - Private properties
     private let computerGuessCounterSubject: Int = 0
     private let playerGuessCounterSubject: Int = 0
-    private var finalScoreStringSubject: String = "*"
+    private var finalScoreStringSubject: String = "формула не работает"
     
     // MARK: - Managers
     

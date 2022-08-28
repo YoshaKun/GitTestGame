@@ -15,6 +15,8 @@ final class FinalView: UIView {
     
     // MARK: - Public pproperties
     
+    weak var delegate: FinalViewDelegate?
+    
     // MARK: - View properties
     
     private let gameLabel = UILabel()
@@ -56,7 +58,7 @@ final class FinalView: UIView {
     }
     
     @objc private func didTappedReturnButton() {
-//        delegate?didTappedReturnButton()
+        delegate?.didTappedReturnButton()
     }
     
     private func configureLayouts() {
@@ -72,7 +74,9 @@ final class FinalView: UIView {
             scoreLabel.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0),
             
             returnButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -70),
-            returnButton.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0)
+            returnButton.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 0),
+            returnButton.widthAnchor.constraint(equalToConstant: 200),
+            returnButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     
