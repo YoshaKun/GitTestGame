@@ -1,3 +1,3 @@
 # GitTestGame 
-![First screenshot](https://raw.githubusercontent.com/YoshaKun/GitTestGame/0e1f06db2f8d5d6ee5eca154bfdad89899008b75/001.png)
+![First screenshot](https://raw.githubusercontent.com/YoshaKun/GitTestGame/5723efb6cafff41c0baf774870b059bb93514080/001.png)
 ### GitTestGame - this is the "Guess number" game between man and computer
