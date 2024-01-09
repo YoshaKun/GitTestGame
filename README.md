@@ -1,6 +1,13 @@
 # GitTestGame 
 
 ### GitTestGame - this is the "Guess number" game between man and computer
+
+### COMMON INFORMATION:
++ Programming language - Swift
++ Architecture - MVVM
++ Technology - Combine
+
+## Screenshots
 ![First screenshot](https://github.com/YoshaKun/GitTestGame/blob/assets/001.png)
 
 ### There is two modes: you can choose who should begin game first - you or computer
